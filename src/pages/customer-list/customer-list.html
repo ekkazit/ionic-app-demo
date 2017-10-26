@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Customer List</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar placeholder="Search customers"></ion-searchbar>
+  <ion-list>
+    <button ion-item *ngFor="let cust of customers" (click)="viewCustomerActionSheet(cust)">
+      <ion-avatar item-left>
+        <img [src]="cust.image">
+      </ion-avatar>
+      <h1>{{ cust.name }}</h1>
+      <p>{{ cust.email }}</p>
+    </button>
+  </ion-list>
+</ion-content>
